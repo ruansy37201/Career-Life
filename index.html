@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职场人生 - 就业抉择小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 开始界面 -->
+        <div id="start-screen" class="screen active">
+            <div class="card">
+                <h1>💼 职场人生</h1>
+                <p class="subtitle">就业抉择模拟器</p>
+                <p class="desc">你刚毕业了，即将面临人生中最重要的选择。<br>每一轮做出你的决定，看看最终走向何方。</p>
+                <div class="stats-preview">
+                    <span>💰 存款</span>
+                    <span>😊 幸福感</span>
+                    <span>📈 职业发展</span>
+                </div>
+                <button id="start-btn" class="btn btn-primary">开始游戏</button>
+            </div>
+        </div>
+
+        <!-- 游戏界面 -->
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <span id="round-text">第 1 / 10 轮</span>
+            </div>
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-icon">💰</span>
+                    <span id="money-val">50</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">😊</span>
+                    <span id="happy-val">50</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">📈</span>
+                    <span id="career-val">50</span>
+                </div>
+            </div>
+            <div class="card">
+                <p id="story-text" class="story"></p>
+                <div id="choices" class="choices">
+                    <button class="btn btn-choice" data-choice="0"></button>
+                    <button class="btn btn-choice" data-choice="1"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 结果界面 -->
+        <div id="result-screen" class="screen">
+            <div class="card">
+                <h1 id="result-title"></h1>
+                <div class="final-stats">
+                    <div class="final-stat">
+                        <span class="stat-icon">💰</span>
+                        <span id="final-money"></span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="stat-icon">😊</span>
+                        <span id="final-happy"></span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="stat-icon">📈</span>
+                        <span id="final-career"></span>
+                    </div>
+                </div>
+                <div id="result-desc" class="result-desc"></div>
+                <button id="restart-btn" class="btn btn-primary">再来一次</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
